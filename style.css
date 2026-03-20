@@ -1,29 +1,119 @@
+/* Base */
 body {
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background: #ffffff;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+  transition: 0.3s;
 }
+
 
 .container {
   background: white;
   padding: 20px;
-  width: 300px;
-  border-radius: 10px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+
+.input-section {
+  display: flex;
+  gap: 5px;
 }
 
 input {
-  width: 70%;
+  flex: 1;
   padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #666;
 }
 
 button {
-  padding: 10px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  background: #eaeaea;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #dcdcdc;
+}
+
+/* Task List */
+ul {
+  padding: 0;
+  margin-top: 15px;
 }
 
 li {
-  margin-top: 10px;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* completed tasks */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Darkmode */
+.dark {
+  background: #121212;
+  color: #ffffff;
+}
+
+/* container dark */
+.dark .container {
+  background: #1e1e1e;
+  box-shadow: 0 5px 20px rgba(255,255,255,0.05);
+}
+
+/* input dark */
+.dark input {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: white;
+}
+
+.dark input::placeholder {
+  color: #aaa;
+}
+
+/* button dark */
+.dark button {
+  background: #333;
+  color: white;
+}
+
+.dark button:hover {
+  background: #444;
+}
+
+/* task dark */
+.dark li {
+  background: #2a2a2a;
 }

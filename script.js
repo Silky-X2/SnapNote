@@ -9,7 +9,7 @@ function saveTasks() {
 
 function renderTasks() {
     const list = document.getElementById("taskList");
-    list.innerHTML = ""; // reset
+    list.innerHTML = ""; 
 
     tasks.forEach((task, index) => {
         const li = document.createElement("li");
@@ -20,14 +20,20 @@ function renderTasks() {
         if (task.completed) {
             span.classList.add("completed");
         }
-
+        
         span.onclick = () => toggleTask(index);
+        span.ondblclick = () => startEdit(index);
 
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "❌";
         deleteBtn.onclick = () => deleteTask(index);
 
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "✏️";
+        editBtn.onclick = () => startEdit(index);
+
         li.appendChild(span);
+        li.appendChild(editBtn);
         li.appendChild(deleteBtn);
 
         list.appendChild(li);
@@ -68,6 +74,45 @@ function deleteTask(index) {
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
 }
+
+function startEdit(index) {
+    const list = document.getElementById("taskList");
+    const li = list.children[index];
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = tasks[index].text;
+
     
+    li.replaceChild(input, li.querySelector("span"));
+
+    input.focus();
+
+    // save function
+    function saveEdit() {
+        const newText = input.value.trim();
+
+        if (newText !== "") {
+            tasks[index].text = newText;
+            saveTasks();
+            renderTasks();
+        } else {
+            renderTasks(); 
+        }
+    }
+
+    // Enter 
+    input.onkeydown = (e) => {
+        if (e.key === "Enter") {
+            saveEdit();
+        }
+    };
+
+    // Klick outside
+    input.onblur = () => {
+        saveEdit();
+    };
+}
+
 loadTasks();
 renderTasks();

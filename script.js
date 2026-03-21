@@ -1,55 +1,17 @@
-function addTask() {
-    const input = document.getElementById("taskInput");
-    const taskText = input.value.trim();
-
-    if (taskText === "") return;
-
-    const li = document.createElement("li");
-
-    const span = document.createElement("span");
-    span.textContent = taskText;
-
-    span.onclick = () => {
-        span.classList.toggle("completed");
-        saveTasks();
-    };
-
-    const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "❌";
-            deleteBtn.onclick = () => {
-            li.remove();
-            saveTasks();
-    };
-
-    li.appendChild(span);
-    li.appendChild(deleteBtn);
-
-    document.getElementById("taskList").appendChild(li);
-
-    input.value = "";
-
-    saveTasks();
+let tasks = [];
+    function loadTasks() {
+    tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 }
 
-    function saveTasks() {
-    const tasks = [];
-
-    document.querySelectorAll("#taskList li").forEach(li => {
-        const span = li.querySelector("span");
-
-        tasks.push({
-            text: span.textContent,
-            completed: span.classList.contains("completed")
-        });
-    });
-
+function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
+}
 
-    function loadTasks() {
-    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+function renderTasks() {
+    const list = document.getElementById("taskList");
+    list.innerHTML = ""; // reset
 
-    tasks.forEach(task => {
+    tasks.forEach((task, index) => {
         const li = document.createElement("li");
 
         const span = document.createElement("span");
@@ -59,25 +21,53 @@ function addTask() {
             span.classList.add("completed");
         }
 
-        span.onclick = () => {
-            span.classList.toggle("completed");
-            saveTasks();
-        };
+        span.onclick = () => toggleTask(index);
 
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "❌";
-        deleteBtn.onclick = () => {
-            li.remove();
-            saveTasks();
-        };
+        deleteBtn.onclick = () => deleteTask(index);
 
         li.appendChild(span);
         li.appendChild(deleteBtn);
 
-        document.getElementById("taskList").appendChild(li);
+        list.appendChild(li);
     });
 }
-    function toggleDarkMode() {
-        document.body.classList.toggle("dark");
-    }
-    loadTasks();
+
+function addTask() {
+    const input = document.getElementById("taskInput");
+    const text = input.value.trim();
+
+    if (!text) return;
+
+    tasks.push({
+        text: text,
+        completed: false
+    });
+
+    input.value = "";
+
+    saveTasks();
+    renderTasks();
+}
+
+function toggleTask(index) {
+    tasks[index].completed = !tasks[index].completed;
+
+    saveTasks();
+    renderTasks();
+}
+
+function deleteTask(index) {
+    tasks.splice(index, 1);
+
+    saveTasks();
+    renderTasks();
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+    
+loadTasks();
+renderTasks();

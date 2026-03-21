@@ -13,6 +13,7 @@ SnapTask is a clean and minimal to-do app that helps you quickly capture, organi
 * 🗑️ Delete tasks
 * 💾 Local storage (tasks are saved)
 * 🌙 Clean & minimal design
+* 🌓 Dark Mode
 
 ---
 
@@ -56,7 +57,6 @@ Coming soon...
 
 ## 🧠 Future Improvements
 
-* 🌙 Dark Mode
 * 📱 Mobile optimization
 * 📝 Edit tasks
 * 📊 Task statistics

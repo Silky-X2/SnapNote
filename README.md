@@ -2,7 +2,7 @@
 
 > Minimal. Fast. Productive.
 
-SnapTask is a clean and minimal to-do app that helps you quickly capture, organize, and complete your daily tasks.
+SnapNote is a clean and minimal to-do app that helps you quickly capture, organize, and complete your daily tasks.
 
 ---
 
@@ -11,9 +11,11 @@ SnapTask is a clean and minimal to-do app that helps you quickly capture, organi
 * Add tasks instantly
 * Mark tasks as completed
 * Delete tasks
+* Edit tasks
 * Local storage (tasks are saved)
 * Clean & minimal design
 * Dark Mode
+* Filter your tasks
 
 ---
 
@@ -50,16 +52,17 @@ cd snaptask
 ---
 
 ## 📸 Screenshots
+<img width="466" height="447" alt="Screenshot 2026-03-22 191052" src="https://github.com/user-attachments/assets/bebd799f-10ee-4bc5-86ae-6a3777334c31" />
+<img width="433" height="436" alt="image" src="https://github.com/user-attachments/assets/a4ff8fbb-bd71-4875-9264-50b672cd46be" />
 
-Coming soon...
 
 ---
 
 ## 🧠 Future Improvements
 
 * Mobile optimization
-* Edit tasks
 * Task statistics
+* Webside
 
 ---
 

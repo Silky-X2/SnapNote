@@ -1,4 +1,4 @@
-# 🚀 SnapNote
+# SnapNote
 
 > Minimal. Fast. Productive.
 
@@ -6,7 +6,7 @@ SnapNote is a clean and minimal to-do app that helps you quickly capture, organi
 
 ---
 
-## ✨ Features
+## Features
 
 * Add tasks instantly
 * Mark tasks as completed
@@ -19,13 +19,13 @@ SnapNote is a clean and minimal to-do app that helps you quickly capture, organi
 
 ---
 
-## 🖥️ Demo
+## Demo
 
 Coming soon...
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * HTML
 * CSS
@@ -33,7 +33,7 @@ Coming soon...
 
 ---
 
-## 📦 Installation
+## Installation
 
 1. Clone the repository:
 
@@ -51,14 +51,14 @@ cd snaptask
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 <img width="466" height="447" alt="Screenshot 2026-03-22 191052" src="https://github.com/user-attachments/assets/bebd799f-10ee-4bc5-86ae-6a3777334c31" />
 <img width="433" height="436" alt="image" src="https://github.com/user-attachments/assets/a4ff8fbb-bd71-4875-9264-50b672cd46be" />
 
 
 ---
 
-## 🧠 Future Improvements
+## Future Improvements
 
 * Mobile optimization
 * Task statistics
@@ -66,19 +66,19 @@ cd snaptask
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!
 Feel free to fork this repo and submit a pull request.
 
 ---
 
-## 📄 License
+## License
 
 This project is open source.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Made with ❤️ by silky

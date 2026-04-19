@@ -8,26 +8,29 @@
 </head>
 <body>
 
-
     <div class="container">
         <div class="top-bar">
             <h1>To-Do</h1>
-            <button onclick="toggleDarkMode()">🌙</button> <!-- Dark Mode Button -->
+            <button id="darkModeBtn" aria-label="Toggle dark mode">🌙</button>
         </div>
         <div class="input-section">
-            <input type="text" id="taskInput" placeholder="New Task">
-            <button onclick="addTask()">+</button>
+            <label for="taskInput" class="sr-only">New task</label>
+            <input type="text" id="taskInput" placeholder="New Task" autocomplete="off">
+            <button id="addBtn" aria-label="Add task">+</button>
         </div>
 
         <!-- Filter -->
-        <div class="filters">
-            <button onclick="setFilter('all')">All</button>
-            <button onclick="setFilter('active')">Open</button>
-            <button onclick="setFilter('completed')">Done</button>
+        <div class="filters" role="group" aria-label="Filter tasks">
+            <button data-filter="all">All</button>
+            <button data-filter="active">Open</button>
+            <button data-filter="completed">Done</button>
         </div>
 
+        <!-- Stats -->
+        <p id="taskStats" class="task-stats" aria-live="polite"></p>
+
         <!-- Tasks -->
-        <ul id="taskList"></ul>
+        <ul id="taskList" aria-label="Task list" aria-live="polite"></ul>
     </div>
 
     <script src="script.js"></script>

@@ -8,14 +8,16 @@ SnapNote is a clean and minimal to-do app that helps you quickly capture, organi
 
 ## Features
 
-* Add tasks instantly
-* Mark tasks as completed
+* Add tasks instantly (click **+** or press **Enter**)
+* Mark tasks as completed (click task text, or press Space/Enter when focused)
 * Delete tasks
-* Edit tasks
-* Local storage (tasks are saved)
-* Clean & minimal design
-* Dark Mode
-* Filter your tasks
+* Edit tasks inline (double-click task text, or click ✏️; confirm with Enter, cancel with Escape)
+* Task statistics (completed / total counter)
+* Filter tasks — All, Open, Done
+* Local storage persistence (tasks survive page refresh)
+* Dark mode (preference persisted across sessions)
+* Accessible — keyboard-navigable, ARIA labels, screen-reader live regions
+* Mobile-friendly responsive layout
 
 ---
 
@@ -29,7 +31,7 @@ Coming soon...
 
 * HTML
 * CSS
-* JavaScript
+* JavaScript (vanilla)
 
 ---
 
@@ -44,10 +46,34 @@ git clone https://github.com/Silky-X2/SnapNote.git
 2. Open the project folder:
 
 ```bash
-cd snaptask
+cd SnapNote
 ```
 
 3. Open `index.html` in your browser
+
+No build step required — it's plain HTML/CSS/JS.
+
+---
+
+## Development
+
+### Install dev dependencies (linting & tests)
+
+```bash
+npm install
+```
+
+### Run tests
+
+```bash
+npm test
+```
+
+### Lint
+
+```bash
+npm run lint
+```
 
 ---
 
@@ -55,14 +81,6 @@ cd snaptask
 <img width="466" height="447" alt="Screenshot 2026-03-22 191052" src="https://github.com/user-attachments/assets/bebd799f-10ee-4bc5-86ae-6a3777334c31" />
 <img width="433" height="436" alt="image" src="https://github.com/user-attachments/assets/a4ff8fbb-bd71-4875-9264-50b672cd46be" />
 
-
----
-
-## Future Improvements
-
-* Mobile optimization
-* Task statistics
-* Webside
 
 ---
 

@@ -1,0 +1,17 @@
+{
+  "name": "snapnote",
+  "version": "1.0.0",
+  "description": "Minimal, fast to-do app",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint script.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
+  }
+}

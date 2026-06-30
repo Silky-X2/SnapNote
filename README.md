@@ -13,10 +13,10 @@ SnapNote is a clean and minimal to-do app that helps you quickly capture, organi
 * Delete tasks
 * Edit tasks inline (double-click task text, or click ✏️; confirm with Enter, cancel with Escape)
 * Task statistics (completed / total counter)
-* Filter tasks — All, Open, Done
+* Filter tasks All, Open, Done
 * Local storage persistence (tasks survive page refresh)
 * Dark mode (preference persisted across sessions)
-* Accessible — keyboard-navigable, ARIA labels, screen-reader live regions
+* Accessible keyboard-navigable, ARIA labels, screen-reader live regions
 * Mobile-friendly responsive layout
 
 ---
@@ -51,7 +51,7 @@ cd SnapNote
 
 3. Open `index.html` in your browser
 
-No build step required — it's plain HTML/CSS/JS.
+No build step required it's plain HTML/CSS/JS.
 
 ---
 
